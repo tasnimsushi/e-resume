@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Italiana' rel='stylesheet'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My E-Resume</title>
+  <style>
+    .navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #4f5b46;
+      padding: 2rem 2rem;
+      gap: 2cm; /* Jarak 1 cm antara elemen */
+    }
+    
+    .navbar-logo  {
+      height: 2.5cm; 
+      width: 2cm;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      transform: translateX(-50%);
+      right: 88%;
+      
+    }
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-size: 1rem;
+    }
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+    
+    /* Footer styles */
+    footer {
+      background-color: #4f5b46;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    .media-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 0.5rem 0;
+    }
+    .media-icons a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.5rem;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+    .media-icons a:hover {
+      transform: scale(1.2);
+      color: #d4af37; 
+    }
+
+*{
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+ 
+/* Footer styles */
+footer {
+      background-color: #4f5b46;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    .media-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 0.5rem 0;
+    }
+    .media-icons a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.5rem;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+    .media-icons a:hover {
+      transform: scale(1.2);
+      color: #d4af37; 
+    }
+    
+  </style>
+
+
+</head>
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="education.html">Education</a>
+  <a href="me.html">Me</a>
+  <a href="experiences.html">Experiences</a>
+  <a href="contact.html">Contact</a>
+
+  <!-- Center Logo -->
+  <div class="navbar-logo">
+    <img src="image/ts_logo-removebg-preview.png" alt="Logo">
+  </div>
+
+</div>
+
+
+
+  <body>
+  <!-- title content 'Education' -->
+  <h2 style="color: #4f5b46; text-align: center; border-bottom-style: solid; border-width: 1px; border-color: rgb(70, 68, 68); font-weight: bolder;">Education</h2>  
+
+  <h3 style="margin-left: 46%; font-size: xx-large; font-weight: bolder; color: #889d78;"> >>> <br><br> <br></h3>
+
+<div class="row">
+  <div class="column" style=" border-right-style: dashed; border-color: #a7a39d;">
+    <img src="image/smkpp91logo.png" style="width: 50%; height: auto;margin-top: -30%; margin-left: 25%;">
+    <h3 style="font-weight: bolder; color: rgb(74, 72, 71); font-size: medium;">SEKOLAH MENENGAH KEBANGSAAN PUTRAJAYA PRESINT 9(1) <br> <br>  (2019)
+    </h3>
+    <p style="font-family: sans-serif; ; text-align: justify;color: rgb(93, 78, 66); ">During my high school years, I had the oppurtunity to engage in academic curriculums that not only enhanced my knowledge but also sharpened essential skills required for higher education and future career success.</p>
+  </div>
+
+  <div class="column" style="border-right-style: dashed;border-color: #a7a39d; ">
+    <img src="image/uitmlogo.png" style="width: 23%; height: auto;margin-top: -30%; margin-left: 35%;">
+    <h3 style="font-weight: bolder; color: rgb(74, 72, 71); font-size: medium;">UNIVERSITY TECHNOLOGY MARA (UITM) SUNGAI PETANI, KEDAH. <br> <br> Diploma in Industrial Design (2022)</h3>
+    <p style="font-family: sans-serif; color: rgb(93, 78, 66); text-align: justify;">My journey to getting my diploma was not all about having a good grades but to also enhanced my my communication skills and make good connections with people.</p>
+  </div>
+  <div class="column" style="border-right-style: dashed; border-color: #a7a39d;">
+    <img src="image/uitmlogo.png" style="width: 23%; height: auto;margin-top: -30%; margin-left: 35%;">
+    <h3 style="font-weight: bolder; color: rgb(74, 72, 71);font-size: medium;">UNIVERSITY TECHNOLOGY MARA (UITM) PUNCAK PERDANA, SHAH ALAM. <br> <br> Bachelor of Information Science (Hons) Information Systems Management (2024)</h3>
+    <p style="font-family: sans-serif; color: rgb(93, 78, 66); font-size: medium;text-align: justify;">My time at UiTM Puncak Perdana was a valuable learning experience. I gained a solid foundation in Information Management Systems and improved my problem-solving skills. The challenges helped me manage time better, stay focused, and adapt to new situations, making me a more confident and capable person.</p>
+  </div>
+</div>
+ 
+<section><br> <br></section>
+<!-- contact in footer -->
+<footer>
+    <div class="media-icons">
+      <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:your-email@example.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p>© 2024 My E-Resume. All rights reserved.</p>
+  </footer>
+  
+
+
+
+
+
+
+
+
+ </body>
+
+</html>

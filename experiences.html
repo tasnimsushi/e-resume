@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Italiana' rel='stylesheet'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My E-Resume</title>
+  <style>
+    .navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #4f5b46;
+      padding: 2rem 2rem;
+      gap: 2cm; /* Jarak 1 cm antara elemen */
+    }
+    
+    .navbar-logo  {
+      height: 2.5cm; 
+      width: 2cm;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      transform: translateX(-50%);
+      right: 88%;
+      
+    }
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-size: 1rem;
+    }
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: Italiana, sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  height: 35cm;
+  width: 6px;
+  background-color: #4f5b46;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+ 
+}
+
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  
+}
+
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #948f8b;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #4f5b4695;
+  
+}
+
+
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #4f5b4695 transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: #4f5b4695;
+  position: relative;
+  border-radius: 8px;
+  transition: transform 0.10s ease, box-shadow 0.10s ease;
+}
+
+.content:hover {
+    transform: scale(1.02);
+    box-shadow: 0 2px 2px rgba(28, 28, 28, 0.2);
+
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
+}
+    
+  /* Footer styles */
+footer {
+      background-color: #4f5b46;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    .media-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 0.5rem 0;
+    }
+    .media-icons a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.5rem;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+    .media-icons a:hover {
+      transform: scale(1.2);
+      color: #d4af37; 
+    }
+     
+    
+  </style>
+
+
+</head>
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="education.html">Education</a>
+  <a href="me.html">Me</a>
+  <a href="experiences.html">Experiences</a>
+  <a href="contact.html">Contact</a>
+
+  <!-- Center Logo -->
+  <div class="navbar-logo">
+    <img src="image/ts_logo-removebg-preview.png" alt="Logo">
+  </div>
+
+</div>
+
+  <body>
+  <!-- title content 'Education' -->
+  <h2 style="color: #4f5b46; text-align: center; border-bottom-style: solid; border-width: 1px; border-color: rgb(70, 68, 68); font-weight: bolder;">Experiences</h2>  
+
+  <div class="timeline">
+    <div class="container left">
+      <div class="content">
+        <h2 style="color: #ffffff; font-weight: bolder;">2019-2018</h2> 
+        <p style="color: #ffffff; font-family: sans-serif; text-align: justify;"> Self-employed freelance Graphic Designer <br> <br> While in high school, I developed a strong passion for graphic design and began offering my services as a freelancer. Through self-learning and online resources, I honed my skills in editing and design software and gained hands-on experience working with local businesses, individuals, and school projects. </p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h2 style="color: #ffffff; font-weight: bolder;">2022</h2>
+        <img src="image/quantumlogo.png" style="width: 20%; height: auto;margin-top: -30%; margin-left: 80%;">
+        <p style="color: #ffffff; font-family: sans-serif; text-align: justify;">UX/UI Design at Quantum Loop  <br> <br> At Quantum Loop, I contribute to the design and development of intuitive, user-friendly interfaces for both web and mobile applications. Working closely with cross-functional teams, I focus on enhancing the user experience by incorporating user feedback, design principles, and the latest trends in UI/UX design. My role involves translating user needs into engaging design solutions that improve usability, accessibility, and overall satisfaction.</p>
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <h2 style="color: #ffffff; font-weight: bolder;">2024</h2>
+        <img src="image/abclogo.png" style="width: 20%; height: auto;margin-top: -30%; margin-left: 80%;">
+        <p style="color: #ffffff; font-family: sans-serif;text-align: justify;"> Intern-Web developer at ABC Tech Solution  <br> <br>  As an intern web developer at ABC Tech Solutions, I worked alongside senior developers to support the development and maintenance of client websites and internal tools. My role provided hands-on experience in front-end and back-end development, where I learned to collaborate effectively within a fast-paced development environment. During my internship, I applied programming languages, frameworks, and development practices to deliver functional, user-friendly web solutions.</p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h2  style="color: #ffffff; font-weight: bolder;">2025</h2>
+        <img src="image/alphalogo.png" style="width: 20%; height: auto;margin-top: -30%; margin-left: 80%;">
+        <p style="color: #ffffff; font-family: sans-serif;text-align: justify;">Web developer at Alpha Byte Technology   <br> <br>     As a web developer at Alpha Byte Technology, I am responsible for designing, developing, and maintaining websites and web applications for clients across various industries. My work involves collaborating with designers, project managers, and other developers to create custom websites that are not only visually appealing but also user-friendly and high-performing. I leverage my skills in both front-end and back-end development to ensure seamless functionality and a great user experience.</p>
+      </div>
+    </div>
+    
+ </body>
+<section> <br></section>
+ <footer>
+    <div class="media-icons">
+      <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:your-email@example.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p>© 2024 My E-Resume. All rights reserved.</p>
+  </footer>
+
+</html>
